@@ -1,4 +1,3 @@
-// Connection to the MongoDB
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
