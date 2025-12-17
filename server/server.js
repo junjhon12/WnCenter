@@ -13,3 +13,4 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
 app.use("/api/users", require("./routes/api/users"));
+app.use('/api/auth', require('./routes/api/auth'));

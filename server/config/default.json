@@ -1,3 +1,4 @@
 {
-  "mongoURI": "placeholder-text"
+  "mongoURI": "placeholder-text",
+  "jwtSecret": "placeholder-text"
 }
