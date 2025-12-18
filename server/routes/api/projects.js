@@ -23,4 +23,18 @@ router.post('/', auth, async (req, res) => {
   }
 });
 
+// @route    GET api/projects
+// @desc     Get all projects for the logged-in user
+// @access   Private
+router.get('/', auth, async (req, res) => {
+  try {
+    // Find projects belonging to this user and sort by newest first
+    const projects = await Project.find({ user: req.user.id }).sort({ date: -1 });
+    res.json(projects);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;
